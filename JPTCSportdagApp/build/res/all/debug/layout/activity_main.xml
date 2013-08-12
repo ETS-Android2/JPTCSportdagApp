@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/layout_achtergrond"
+        android:gravity="center"
+        tools:context=".MainActivity">
+
+    <ImageView
+            android:id="@+id/top_id"
+            android:layout_alignParentTop="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/layout_bovenkant"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="false"
+            android:cropToPadding="false"
+            android:longClickable="false"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:contentDescription="@string/topbarDesc"></ImageView>
+
+    <ImageView
+            android:id="@+id/bottom_id"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/layout_onderkant"
+            android:scaleType="centerCrop"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:contentDescription="@string/bottomDesc"
+            android:adjustViewBounds="false"></ImageView>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            android:layout_above="@id/bottom_id"
+            android:layout_below="@id/top_id"
+            android:layout_gravity="center">
+
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+            <Button
+                    android:layout_width="240sp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Leerlingbutton_id"
+                    android:background="@drawable/button"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:text="@string/leerlingbutton"
+                    android:textSize="25sp"
+                    android:layout_marginTop="20sp"
+                    android:clickable="true"/>
+
+            <Button
+                    android:layout_width="240sp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Begeleidingbutton_id"
+                    android:background="@drawable/button"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:text="@string/begeleidingbutton"
+                    android:textSize="25sp"
+                    android:layout_marginTop="20sp"
+                    android:layout_gravity="center"
+                    android:clickable="true"/>
+
+            <Button
+                    android:layout_width="240sp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Recordsbutton_id"
+                    android:background="@drawable/button"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:text="@string/recordbutton"
+                    android:textSize="25sp"
+                    android:layout_marginTop="20sp"
+                    android:clickable="true"
+                    android:focusable="false"/>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
+<!-- From: file:/C:/Users/stefan/AndroidStudioProjects/JPTCSportdagAppProject/JPTCSportdagApp/src/main/res/layout/activity_main.xml -->

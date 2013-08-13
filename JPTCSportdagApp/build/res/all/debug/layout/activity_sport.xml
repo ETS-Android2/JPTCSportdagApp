@@ -1,48 +1,48 @@
 <RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:gravity="center"
-    tools:context=".MainActivity"
-    android:background="@drawable/layout_achtergrond">
+        xmlns:android = "http://schemas.android.com/apk/res/android"
+        xmlns:tools = "http://schemas.android.com/tools"
+        android:layout_width = "fill_parent"
+        android:layout_height = "fill_parent"
+        android:gravity = "center"
+        tools:context = ".MainActivity"
+        android:background = "@drawable/layout_achtergrond">
 
     <ImageView
-        android:id="@+id/top_id"
-        android:layout_alignParentTop="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/layout_bovenkant"
-        android:scaleType="centerCrop"
-        android:adjustViewBounds="false"
-        android:cropToPadding="false"
-        android:longClickable="false"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true"
-        android:contentDescription="@string/topbarDesc" />
+            android:id = "@+id/top_id"
+            android:layout_alignParentTop = "true"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:src = "@drawable/layout_bovenkant"
+            android:scaleType = "centerCrop"
+            android:adjustViewBounds = "false"
+            android:cropToPadding = "false"
+            android:longClickable = "false"
+            android:layout_alignParentEnd = "true"
+            android:layout_alignParentStart = "true"
+            android:contentDescription = "@string/topbarDesc"/>
 
     <ImageView
-        android:id="@+id/bottom_id"
-        android:layout_alignParentBottom="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/layout_onderkant"
-        android:scaleType="centerCrop"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true"
-        android:contentDescription="@string/bottomDesc"
-        android:adjustViewBounds="false" />
+            android:id = "@+id/bottom_id"
+            android:layout_alignParentBottom = "true"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:src = "@drawable/layout_onderkant"
+            android:scaleType = "centerCrop"
+            android:layout_alignParentEnd = "true"
+            android:layout_alignParentStart = "true"
+            android:contentDescription = "@string/bottomDesc"
+            android:adjustViewBounds = "false"/>
 
     <android.support.v4.view.ViewPager
-        android:id="@+id/pager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/bottom_id"
-        android:layout_below="@id/top_id"
-        tools:context=".SportActivity"
-        android:layout_marginBottom="-18sp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true">
+            android:id = "@+id/pager"
+            android:layout_width = "match_parent"
+            android:layout_height = "match_parent"
+            android:layout_above = "@id/bottom_id"
+            android:layout_below = "@id/top_id"
+            tools:context = ".SportActivity"
+            android:layout_marginBottom = "-18sp"
+            android:layout_alignParentEnd = "true"
+            android:layout_alignParentStart = "true">
 
         <!--
         This title strip will display the currently visible page title, as well as the page
@@ -50,15 +50,15 @@
         -->
 
         <android.support.v4.view.PagerTitleStrip
-            android:id="@+id/pager_title_strip"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:background="#47B0ED"
-            android:paddingBottom="4dp"
-            android:textSize="25sp"
-            android:paddingTop="4dp"
-            android:textColor="#fff" />
+                android:id = "@+id/pager_title_strip"
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:layout_gravity = "bottom"
+                android:background = "#47B0ED"
+                android:paddingBottom = "4dp"
+                android:textSize = "25sp"
+                android:paddingTop = "4dp"
+                android:textColor = "#fff"/>
 
     </android.support.v4.view.ViewPager>
-</RelativeLayout><!-- From: file:/C:/Users/stefan/AndroidStudioProjects/JPTCSportdagAppProject/JPTCSportdagApp/src/main/res/layout/activity_sport.xml -->
+</RelativeLayout><!-- From: file:/C:/Users/stefan/Development/JPTSportdagApp/JPTCSportdagAppProject/JPTCSportdagApp/src/main/res/layout/activity_sport.xml -->

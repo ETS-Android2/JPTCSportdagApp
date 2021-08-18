@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:background="@drawable/layout_achtergrond"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/top_id"
+        android:longClickable="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/layout_bovenkant"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/topbarDesc"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:id="@+id/bottom_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/layout_onderkant"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="false"
+        android:layout_alignParentBottom="true"
+        android:contentDescription="@string/bottomDesc"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <android.support.p000v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="-18sp"
+        android:layout_above="@+id/bottom_id"
+        android:layout_below="@+id/top_id"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true">
+
+        <android.support.p000v4.view.PagerTitleStrip
+            android:textSize="25sp"
+            android:textColor="#fff"
+            android:layout_gravity="bottom"
+            android:id="@+id/pager_title_strip"
+            android:background="#47b0ed"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </android.support.p000v4.view.ViewPager>
+</RelativeLayout>

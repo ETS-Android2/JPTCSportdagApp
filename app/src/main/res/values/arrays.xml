@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="klas">
+        <item>1A</item>
+        <item>1B</item>
+    </array>
+    <array name="leerlingen_1A">
+        <item>Laura Jansen</item>
+        <item>Bas Notendop</item>
+        <item>Jacob Langebroek</item>
+    </array>
+    <array name="leerlingen_1B">
+        <item>Kees Jansen</item>
+        <item>Karel Notendop</item>
+        <item>Hans Langebroek</item>
+    </array>
+</resources>

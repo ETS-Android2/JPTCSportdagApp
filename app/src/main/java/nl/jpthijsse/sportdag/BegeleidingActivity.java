@@ -1,8 +1,8 @@
-package p003nl.jpthijsse.sportdag;
+package nl.jpthijsse.sportdag;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.p000v4.app.NavUtils;
+import android.support.v4.app.NavUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -11,7 +11,7 @@ public class BegeleidingActivity extends Activity {
     /* access modifiers changed from: protected */
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(C0054R.layout.activity_begeleiding);
+        setContentView(R.layout.activity_begeleiding);
         setupActionBar();
     }
 
@@ -20,7 +20,7 @@ public class BegeleidingActivity extends Activity {
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(C0054R.menu.begeleiding, menu);
+        getMenuInflater().inflate(R.menu.begeleiding, menu);
         return true;
     }
 

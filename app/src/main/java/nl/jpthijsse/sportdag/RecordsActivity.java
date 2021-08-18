@@ -1,13 +1,13 @@
-package p003nl.jpthijsse.sportdag;
+package nl.jpthijsse.sportdag;
 
 import android.annotation.TargetApi;
 import android.app.ActionBar;
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.p000v4.app.Fragment;
-import android.support.p000v4.app.FragmentActivity;
-import android.support.p000v4.app.NavUtils;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.NavUtils;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -23,12 +23,12 @@ public class RecordsActivity extends FragmentActivity implements ActionBar.OnNav
     /* access modifiers changed from: protected */
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(C0054R.layout.activity_records);
+        setContentView(R.layout.activity_records);
         ActionBar actionBar = getActionBar();
         actionBar.setDisplayShowTitleEnabled(false);
         actionBar.setNavigationMode(1);
         actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setListNavigationCallbacks(new ArrayAdapter(getActionBarThemedContextCompat(), 17367043, 16908308, new String[]{getString(C0054R.string.title_section1), getString(C0054R.string.title_section2), getString(C0054R.string.title_section3)}), this);
+        actionBar.setListNavigationCallbacks(new ArrayAdapter(getActionBarThemedContextCompat(), 17367043, 16908308, new String[]{getString(R.string.title_section1), getString(R.string.title_section2), getString(R.string.title_section3)}), this);
     }
 
     @TargetApi(14)
@@ -50,7 +50,7 @@ public class RecordsActivity extends FragmentActivity implements ActionBar.OnNav
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(C0054R.menu.records, menu);
+        getMenuInflater().inflate(R.menu.records, menu);
         return true;
     }
 
@@ -69,7 +69,7 @@ public class RecordsActivity extends FragmentActivity implements ActionBar.OnNav
         Bundle args = new Bundle();
         args.putInt(DummySectionFragment.ARG_SECTION_NUMBER, position + 1);
         fragment.setArguments(args);
-        getSupportFragmentManager().beginTransaction().replace(C0054R.C0055id.container, fragment).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment).commit();
         return true;
     }
 
@@ -78,8 +78,8 @@ public class RecordsActivity extends FragmentActivity implements ActionBar.OnNav
         public static final String ARG_SECTION_NUMBER = "section_number";
 
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-            View rootView = inflater.inflate(C0054R.layout.fragment_records_dummy, container, false);
-            ((TextView) rootView.findViewById(C0054R.C0055id.section_label)).setText(Integer.toString(getArguments().getInt(ARG_SECTION_NUMBER)));
+            View rootView = inflater.inflate(R.layout.fragment_records_dummy, container, false);
+            ((TextView) rootView.findViewById(R.id.section_label)).setText(Integer.toString(getArguments().getInt(ARG_SECTION_NUMBER)));
             return rootView;
         }
     }

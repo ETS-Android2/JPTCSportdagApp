@@ -1,12 +1,12 @@
-package p003nl.jpthijsse.sportdag;
+package nl.jpthijsse.sportdag;
 
 import android.os.Bundle;
-import android.support.p000v4.app.Fragment;
-import android.support.p000v4.app.FragmentActivity;
-import android.support.p000v4.app.FragmentManager;
-import android.support.p000v4.app.FragmentPagerAdapter;
-import android.support.p000v4.app.NavUtils;
-import android.support.p000v4.view.ViewPager;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.NavUtils;
+import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -28,14 +28,14 @@ public class SportActivity extends FragmentActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(1);
-        setContentView(C0054R.layout.activity_sport);
+        setContentView(R.layout.activity_sport);
         this.mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
-        this.mViewPager = (ViewPager) findViewById(C0054R.C0055id.pager);
+        this.mViewPager = (ViewPager) findViewById(R.id.pager);
         this.mViewPager.setAdapter(this.mSectionsPagerAdapter);
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(C0054R.menu.sport, menu);
+        getMenuInflater().inflate(R.menu.sport, menu);
         return true;
     }
 
@@ -90,17 +90,17 @@ public class SportActivity extends FragmentActivity {
             Locale l = Locale.getDefault();
             switch (position) {
                 case 0:
-                    return SportActivity.this.getString(C0054R.string.sprint).toUpperCase(l);
+                    return SportActivity.this.getString(R.string.sprint).toUpperCase(l);
                 case 1:
-                    return SportActivity.this.getString(C0054R.string.hardlopen).toUpperCase(l);
+                    return SportActivity.this.getString(R.string.hardlopen).toUpperCase(l);
                 case 2:
-                    return SportActivity.this.getString(C0054R.string.vortex).toUpperCase(l);
+                    return SportActivity.this.getString(R.string.vortex).toUpperCase(l);
                 case 3:
-                    return SportActivity.this.getString(C0054R.string.verspringen).toUpperCase(l);
+                    return SportActivity.this.getString(R.string.verspringen).toUpperCase(l);
                 case 4:
-                    return SportActivity.this.getString(C0054R.string.hindernisbaan).toUpperCase(l);
+                    return SportActivity.this.getString(R.string.hindernisbaan).toUpperCase(l);
                 case 5:
-                    return SportActivity.this.getString(C0054R.string.kogel).toUpperCase(l);
+                    return SportActivity.this.getString(R.string.kogel).toUpperCase(l);
                 default:
                     return null;
             }
@@ -112,7 +112,7 @@ public class SportActivity extends FragmentActivity {
         public static final String ARG_SECTION = "sport";
 
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-            View rootView = inflater.inflate(C0054R.layout.fragment_sport_dummy, container, false);
+            View rootView = inflater.inflate(R.layout.fragment_sport_dummy, container, false);
             ((ImageView) rootView.findViewById(2131230729)).setImageResource(getArguments().getInt("sport"));
             return rootView;
         }
@@ -127,18 +127,18 @@ public class SportActivity extends FragmentActivity {
         public Spinner leerlingSpinner;
 
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-            View rootView = inflater.inflate(C0054R.layout.fragment_sport_dummy, container, false);
-            ((ImageView) rootView.findViewById(C0054R.C0055id.sport_image)).setImageResource(getArguments().getInt("sport"));
-            this.klasSpinner = (Spinner) rootView.findViewById(C0054R.C0055id.klas_spinner);
-            ArrayAdapter<CharSequence> klasAdapter = ArrayAdapter.createFromResource(getActivity().getApplicationContext(), C0054R.array.klas, 17367048);
+            View rootView = inflater.inflate(R.layout.fragment_sport_dummy, container, false);
+            ((ImageView) rootView.findViewById(R.id.sport_image)).setImageResource(getArguments().getInt("sport"));
+            this.klasSpinner = (Spinner) rootView.findViewById(R.id.klas_spinner);
+            ArrayAdapter<CharSequence> klasAdapter = ArrayAdapter.createFromResource(getActivity().getApplicationContext(), R.array.klas, 17367048);
             klasAdapter.setDropDownViewResource(17367049);
             this.klasSpinner.setAdapter(klasAdapter);
             this.klasSpinner.setOnItemSelectedListener(this);
-            this.leerlingSpinner = (Spinner) rootView.findViewById(C0054R.C0055id.leerling_spinner);
+            this.leerlingSpinner = (Spinner) rootView.findViewById(R.id.leerling_spinner);
             this.leerlingSpinner.setOnItemSelectedListener(this);
-            this.klas1AAdapter = ArrayAdapter.createFromResource(getActivity().getApplicationContext(), C0054R.array.leerlingen_1A, 17367048);
+            this.klas1AAdapter = ArrayAdapter.createFromResource(getActivity().getApplicationContext(), R.array.leerlingen_1A, 17367048);
             this.klas1AAdapter.setDropDownViewResource(17367049);
-            this.klas1BAdapter = ArrayAdapter.createFromResource(getActivity().getApplicationContext(), C0054R.array.leerlingen_1B, 17367048);
+            this.klas1BAdapter = ArrayAdapter.createFromResource(getActivity().getApplicationContext(), R.array.leerlingen_1B, 17367048);
             this.klas1BAdapter.setDropDownViewResource(17367049);
             return rootView;
         }

@@ -1,4 +1,4 @@
-package p003nl.jpthijsse.sportdag;
+package nl.jpthijsse.sportdag;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -15,7 +15,7 @@ public class SplashActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(1);
-        setContentView(C0054R.layout.activity_splash);
+        setContentView(R.layout.activity_splash);
     }
 
     /* access modifiers changed from: protected */
@@ -42,7 +42,7 @@ public class SplashActivity extends Activity {
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(C0054R.menu.splash, menu);
+        getMenuInflater().inflate(R.menu.splash, menu);
         return true;
     }
 }

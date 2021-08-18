@@ -1,4 +1,4 @@
-package p003nl.jpthijsse.sportdag;
+package nl.jpthijsse.sportdag;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -13,21 +13,21 @@ public class MainActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(1);
-        setContentView(C0054R.layout.activity_main);
+        setContentView(R.layout.activity_main);
         final Intent LeerlingButtonIntent = new Intent(this, SportActivity.class);
-        ((Button) findViewById(C0054R.C0055id.Leerlingbutton_id)).setOnClickListener(new View.OnClickListener() {
+        ((Button) findViewById(R.id.Leerlingbutton_id)).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 MainActivity.this.startActivity(LeerlingButtonIntent);
             }
         });
         final Intent BegeleidingBtnIntent = new Intent(this, BegeleidingActivity.class);
-        ((Button) findViewById(C0054R.C0055id.Begeleidingbutton_id)).setOnClickListener(new View.OnClickListener() {
+        ((Button) findViewById(R.id.Begeleidingbutton_id)).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 MainActivity.this.startActivity(BegeleidingBtnIntent);
             }
         });
         final Intent RecordsButtonIntent = new Intent(this, RecordsActivity.class);
-        ((Button) findViewById(C0054R.C0055id.Recordsbutton_id)).setOnClickListener(new View.OnClickListener() {
+        ((Button) findViewById(R.id.Recordsbutton_id)).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 MainActivity.this.startActivity(RecordsButtonIntent);
             }
@@ -35,7 +35,7 @@ public class MainActivity extends Activity {
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(C0054R.menu.main, menu);
+        getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 }
